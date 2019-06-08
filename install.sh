@@ -191,6 +191,10 @@ else
   exit 1
 fi
 
+echo "Creating databases..."
+mysql
+
+
 echo "Downloading update-info"
 
 wget https://raw.githubusercontent.com/c3lphie/EUK-Info/master/update.sh -O update-info.sh
