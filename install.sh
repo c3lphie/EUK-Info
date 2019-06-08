@@ -192,7 +192,8 @@ else
 fi
 
 echo "Creating databases..."
-mysql
+wget https://raw.githubusercontent.com/c3lphie/EUK-Info/master/requirements/Database.sql -O Database.sql
+mysql -u root -p root < Database.sql
 
 
 echo "Downloading update-info"
@@ -242,7 +243,6 @@ fi
 
 echo "Enabling services to start on startup..."
 
-systemctl enable create_ap
 systemctl enable mysqld
 systemctl enable httpd
 
