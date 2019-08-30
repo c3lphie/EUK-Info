@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h2>{% block title %} Admin panel {% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+    <div class="picturemng">
+        <h3>Billede håndtering</h3>
+        Upload billeder:
+        <form method="post">
+           <input type="file" name="picupload" id="picupload" placeholder="Billede(r)">
+           <input type="submit" value="Upload">
+        </form>
+    </div>
+    <div class="eventmng">
+       <h3>Event håndtering</h3>
+       Nyt event:
+       <form method="post">
+          <input type="text" name="name" id="name" placeholder="Event navn">
+          <input type="text" name="description" id="description" placeholder="Event beskrivelse">
+          <input type="datetime-local" placeholder="Event dato og tid" name="dateandtime" id="dateandtime"/>
+          <input type="submit" value="Skab event"/>
+       </form>
+    </div>
+{% endblock %}
